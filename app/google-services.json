@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "177011786498",
+    "project_id": "geometryfly-77f2c",
+    "storage_bucket": "geometryfly-77f2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177011786498:android:798cdb0832ff5180e2781b",
+        "android_client_info": {
+          "package_name": "com.example.geometryfly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177011786498-febnto24pbjnuoj4n0tghgcp8bpn3isc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7euoeCznB_XoMVx2UzjOhTMyR9FXRIM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177011786498-febnto24pbjnuoj4n0tghgcp8bpn3isc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
