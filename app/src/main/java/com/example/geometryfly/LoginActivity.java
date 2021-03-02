@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         }
                     });
-                }
+                }existe = false;
             }
         });
         bLaderboard.setOnClickListener(new View.OnClickListener() {
