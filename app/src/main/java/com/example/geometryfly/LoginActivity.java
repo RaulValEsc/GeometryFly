@@ -49,20 +49,23 @@ public class LoginActivity extends AppCompatActivity {
                     database.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for (DataSnapshot child:snapshot.getChildren()){
-                                if (child.child("nombre").getValue().toString().equals(etNombre.getText().toString())){
-                                    existe = true;
+                            if (!existe) {
+                                for (DataSnapshot child : snapshot.getChildren()) {
+                                    if (child.child("nombre").getValue().toString().equals(etNombre.getText().toString())) {
+                                        existe = true;
+                                    }
                                 }
-                            }if(!existe){
-                                Usuario newUsuario = new Usuario(etNombre.getText().toString());
-                                database = FirebaseDatabase.getInstance().getReference().child("usuarios");
-                                existe=true;
-                                database.push().setValue(newUsuario);
-                                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                intent.putExtra("nombre",newUsuario.getNombre());
-                                startActivity(intent);
-                            }else{
-                                Toast.makeText(getApplicationContext(), "Ese nombre ya está registrado", Toast.LENGTH_LONG).show();
+                                if (!existe) {
+                                    Usuario newUsuario = new Usuario(etNombre.getText().toString());
+                                    database = FirebaseDatabase.getInstance().getReference().child("usuarios");
+                                    existe = true;
+                                    database.push().setValue(newUsuario);
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.putExtra("nombre", newUsuario.getNombre());
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Ese nombre ya está registrado", Toast.LENGTH_LONG).show();
+                                }
                             }
                         }
 
